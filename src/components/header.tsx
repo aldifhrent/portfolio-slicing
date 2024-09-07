@@ -12,7 +12,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="pl-[120px] pt-8">
+    <header className="pl-4 md:pl-[60px] lg:pl-[120px] pt-8">
       <div className="flex items-center">
         <button onClick={handleButton}>
           <Bars3BottomLeftIcon
@@ -21,7 +21,6 @@ const Header = () => {
             className="block lg:hidden"
           />
         </button>
-
         <nav
           className={cn(
             "hidden lg:flex gap-8 font-semibold text-[#594F43]",

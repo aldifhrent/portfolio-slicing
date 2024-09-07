@@ -1,21 +1,25 @@
 import Image from "next/image";
-import TestimonialCard from "./testimonial-card";
 import { eczar, WorkSans } from "@/lib/font";
 import { cn } from "@/lib/util";
 const Testimonial = () => {
   return (
-    <section className="px-[62px] py-[128px]">
+    <section className="px-4">
       <div className="flex flex-col mt-[128px] items-center">
         <div>
           <h1
             className={cn(
-              "text-center text-[40px] font-semibold leading-[125%] tracking-[2%]",
+              "text-center text-[40px] font-semibold leading-[125%] tracking-[2%] ",
               eczar.className
             )}
           >
             Some Generous Words
           </h1>
-          <p className={cn("mt-2 font-medium text-[20px]", WorkSans.className)}>
+          <p
+            className={cn(
+              "mt-2 font-medium text-[20px] text-center",
+              WorkSans.className
+            )}
+          >
             Some of my favorite testimonials from my clients
           </p>
         </div>
@@ -29,7 +33,7 @@ const Testimonial = () => {
             />
           </div>
 
-          <div className="flex flex-col lg:flex-row mx-auto items-center text-left md:text-center">
+          <div className="flex flex-col lg:flex-row mx-auto items-center text-left md:text-center gap-6">
             <TestimonialCard
               text={
                 "I had grown a little bit disappointed when I realized that my work would not be taking me in any new, creative design directions. Thankfully, I found Salman Khan and his creativity that goes above and beyond, proving to be exactly what I needed to take."
@@ -59,3 +63,25 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
+
+type TestimonialProps = {
+  text: string;
+  author: string;
+};
+const TestimonialCard = (props: TestimonialProps) => {
+  return (
+    <div className="w-full lg:w-[460px] h-full">
+      <p
+        className={cn(
+          "text-[16px] md:text-[20px] text-center lg:text-start",
+          WorkSans.className
+        )}
+      >
+        {props.text}
+      </p>
+      <h1 className="mt-[15px] font-bold text-[20px] tracking-[25] text-center lg:text-start">
+        {props.author}
+      </h1>
+    </div>
+  );
+};

@@ -3,8 +3,8 @@ import { cn } from "@/lib/util";
 import Image from "next/image";
 const AboutMe = () => {
   return (
-    <section className="mt-16 bg-[#FFDDBF] px-[121px]  w-full py-2 h-full lg:max-h-[681px] ">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-x-[108px]">
+    <section className="mt-16 bg-[#FFDDBF] px-[121px]  w-full py-2 h-fit ">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-x-[108px]">
         <div className="py-[95.5px]">
           <h1
             className={cn(
@@ -42,12 +42,14 @@ const AboutMe = () => {
             Contact Me
           </button>
         </div>
-        <Image
-          src="/images/aboutme.svg"
-          alt="About Me"
-          width={550}
-          height={100}
-        />
+        <div className="">
+          <Image
+            src="/images/aboutme.svg"
+            alt="About Me"
+            width={550}
+            height={100}
+          />
+        </div>
       </div>
     </section>
   );

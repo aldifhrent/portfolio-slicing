@@ -5,12 +5,12 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="pl-[120px] pt-[108px]">
-      <div className="flex flex-col md:flex-row justify-between gap-x-[54px]">
+    <section className="pl-4 md:pl-[60px] lg:pl-[120px] pt-[108px]">
+      <div className="flex flex-col lg:flex-row justify-between gap-x-[54px]">
         <div className="flex flex-col item-start">
           <p
             className={cn(
-              "px-6 py-3 bg-[#FFDDBF] text-[#403930] rounded-[10px] font-semibold text-[24px]  leading-[150%] w-fit",
+              "px-6 py-3 bg-[#FFDDBF] hover:bg-[#e4c5aa] text-[#403930] rounded-[10px] font-semibold text-[24px]  leading-[150%] w-fit cursor-pointer",
               WorkSans.className
             )}
           >
@@ -18,7 +18,7 @@ const Hero = () => {
           </p>
           <h1
             className={cn(
-              "pt-6 text-[59px] sm:text-[42px] md:text-[40px] lg:text-[64px] font-semibold text-[#403930] leading-[125%] tracking-[2%]",
+              "pt-6 text-[59px] sm:text-[42px] md:text-[40px] lg:text-[64px] font-semibold text-[#403930] leading-[125%] tracking-[2%]  max-w-xl",
               eczar.className
             )}
           >
@@ -27,7 +27,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row mt-[40px] gap-x-4 gap-y-4">
             <button
               className={cn(
-                "flex justify-center items-center gap-x-2 px-[33.5px] py-6 bg-[#4E5E80]  rounded-[16px] text-[#F3F2FF] w-[270px] h-[84px] text-center text-[24px]",
+                "flex justify-center items-center gap-x-2 px-[33.5px] py-6 bg-[#4E5E80] hover:bg-[#44516e]  rounded-[16px] text-[#F3F2FF] w-[270px] h-[84px] text-center text-[24px]",
                 WorkSans.className
               )}
             >
@@ -44,7 +44,7 @@ const Hero = () => {
             <button
               style={{ outline: "4px solid #4D5566" }}
               className={cn(
-                "flex justify-center items-center gap-x-2 px-[66px] py-6 bg-transparent  rounded-[16px] text-[#4D5566] w-[270px] h-[84px] text-center text-[24px]",
+                "flex justify-center items-center gap-x-2 px-[66px] py-6 bg-transparent  rounded-[16px] text-[#4D5566] w-[270px] h-[84px] text-center text-[24px] hover:bg-[#403930] hover:text-white",
                 WorkSans.className
               )}
             >
