@@ -12,7 +12,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="pl-4 md:pl-[60px] lg:pl-[120px] pt-8">
+    <header className="pl-4 md:pl-[60px] xl:pl-[120px] pt-8">
       <div className="flex items-center">
         <button onClick={handleButton}>
           <Bars3BottomLeftIcon

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-[#FFEED9] min-h-screen">
+    <main className="bg-[#FFEED9] min-h-screen max-w-screen">
       <Header />
       <Hero />
       <Work />

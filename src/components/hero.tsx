@@ -5,8 +5,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="pl-4 md:pl-[60px] lg:pl-[120px] pt-[108px]">
-      <div className="flex flex-col lg:flex-row justify-between gap-x-[54px]">
+    <section className="pl-4 md:pl-[60px] xl:pl-[120px] pt-[108px]">
+      <div className="flex flex-col lg:flex-col xl:flex-row justify-between gap-x-[54px]">
         <div className="flex flex-col item-start">
           <p
             className={cn(

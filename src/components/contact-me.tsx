@@ -3,7 +3,7 @@ import { cn } from "@/lib/util";
 import Image from "next/image";
 const ContactMe = () => {
   return (
-    <section className="px-[20px] py-[20px] lg:py-[128px] lg:px-[120px]">
+    <section className="px-[30px] py-[30px] md:px-[60px] ,md:py-[60px] xl:py-[128px] xl:px-[120px]">
       <div className="flex flex-col">
         <h1
           className={cn(
@@ -13,7 +13,7 @@ const ContactMe = () => {
         >
           Let’s work together and make everything super cute and super useful.
         </h1>
-        <div className="flex flex-col lg:flex-row justify-between  lg:items-end gap-4 ">
+        <div className="flex flex-col lg:flex-row justify-between  lg:items-end gap-4 items-center  ">
           <button
             style={{ outline: "4px solid #4D5566" }}
             className={cn(

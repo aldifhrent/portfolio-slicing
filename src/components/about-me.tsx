@@ -3,12 +3,12 @@ import { cn } from "@/lib/util";
 import Image from "next/image";
 const AboutMe = () => {
   return (
-    <section className="mt-16 bg-[#FFDDBF] px-[121px]  w-full py-2 h-fit ">
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-x-[108px]">
+    <section className="mt-16 bg-[#FFDDBF] px-[30px] md:px-[60px] xl:px-[121px] w-full py-2 h-auto ">
+      <div className="flex flex-col lg:flex-col xl:flex-row justify-between items-center gap-x-[108px] ">
         <div className="py-[95.5px]">
           <h1
             className={cn(
-              "font-semibold text-[30px] md:text-[40px]",
+              "font-semibold text-[30px] md:text-[40px] text-center lg:text-left",
               eczar.className
             )}
           >
@@ -16,7 +16,7 @@ const AboutMe = () => {
           </h1>
           <div
             className={cn(
-              "mt-4 space-y-2 text-[14px] lg:text-[20px]",
+              "mt-4 space-y-2 text-[14px] lg:text-[20px] text-center lg:text-left max-w-lg lg:max-w-none",
               WorkSans.className
             )}
           >
@@ -35,7 +35,7 @@ const AboutMe = () => {
           <button
             style={{ outline: "4px solid #4D5566" }}
             className={cn(
-              "flex justify-center items-center gap-x-2 px-[66px] py-6 bg-transparent  rounded-[16px] text-[#4D5566] w-[270px] h-[84px] text-center text-[24px] mt-[40px] font-semibold ",
+              "flex sm:mx-auto md:mx-auto lg:mx-0 justify-center items-center gap-x-2 px-[66px] py-6 bg-transparent  rounded-[16px] text-[#4D5566] w-[270px] h-[84px] text-center text-[24px] mt-[40px] font-semibold mx-auto",
               WorkSans.className
             )}
           >
@@ -48,6 +48,7 @@ const AboutMe = () => {
             alt="About Me"
             width={550}
             height={100}
+            className="max-w-none"
           />
         </div>
       </div>

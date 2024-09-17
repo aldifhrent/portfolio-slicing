@@ -23,7 +23,7 @@ const Testimonial = () => {
             Some of my favorite testimonials from my clients
           </p>
         </div>
-        <div className="flex justify-between mt-[96px] relative w-full items-center">
+        <div className="flex justify-between mt-12 lg:mt-[96px] relative w-full items-center">
           <div className="hidden lg:absolute left-0 top-1/2 transform -translate-y-1/2">
             <Image
               src="/icons/chevron-left-testimonial.svg"
