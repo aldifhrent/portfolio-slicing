@@ -1,11 +1,20 @@
+"use client";
+
 import { eczar, WorkSans } from "@/lib/font";
 import { cn } from "@/lib/util";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 const AboutMe = () => {
+  const motionSettings = {
+    initial: { x: -100, opacity: 0 },
+    animate: { x: 0, opacity: 1 },
+    transition: { duration: 1, ease: "easeInOut" },
+  };
   return (
-    <section className="mt-16 bg-[#FFDDBF] px-[30px] md:px-[60px] xl:px-[121px] w-full py-2 h-auto ">
+    <section className="mt-16 bg-[#FFDDBF] px-[30px] md:px-[60px] xl:px-[121px] w-full py-2 h-fit xl:h-[680px]">
       <div className="flex flex-col lg:flex-col xl:flex-row justify-between items-center gap-x-[108px] ">
-        <div className="py-[95.5px]">
+        <motion.div className="py-[95.5px]" {...motionSettings}>
           <h1
             className={cn(
               "font-semibold text-[30px] md:text-[40px] text-center lg:text-left",
@@ -41,16 +50,23 @@ const AboutMe = () => {
           >
             Contact Me
           </button>
-        </div>
-        <div className="">
+        </motion.div>
+        <motion.div
+          {...motionSettings}
+          initial={{
+            x: 100,
+            opacity: 0,
+          }}
+        >
           <Image
             src="/images/aboutme.svg"
             alt="About Me"
             width={550}
             height={100}
-            className="max-w-none"
+            className="max-w-md xl:max-w-none"
+            priority
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

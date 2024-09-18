@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { WorkData } from "@/const";
 import { eczar, WorkSans } from "@/lib/font";
 import { cn } from "@/lib/util";
@@ -7,8 +10,8 @@ interface WorkCardProps {
   title: string;
   description: string;
   image: string;
-  height: number;
-  width: number;
+  height?: number;
+  width?: number;
 }
 
 const Work = () => {
@@ -23,33 +26,34 @@ const Work = () => {
         My Recent Work
       </h1>
       <div className="flex flex-col gap-y-6 mt-8">
-        <WorkCard
-          title={"Sheepify States"}
-          description={
-            "Designed some empty state screens in kawaii style for the popular sheepify app"
-          }
-          image={"/images/work/sheepify.svg"}
-          height={590}
-          width={400}
-        />
-        <WorkCard
-          title={"HoneyBunny"}
-          description={
-            "A colorful dashboard to manage your fictional projects and team, all in a single place."
-          }
-          image={"/images/work/honeybunny.svg"}
-          height={509}
-          width={318}
-        />
-        <WorkCard
-          title={"Memrise Redesign"}
-          description={
-            "I redesigned the popular language learning app memrise in kawaii style to make it more cute."
-          }
-          image={"/images/work/memrise.svg"}
-          height={500}
-          width={100}
-        />
+        {WorkData.map((work, index) => (
+          <motion.div
+            key={index}
+            initial={{
+              opacity: 0,
+              y: 24,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              delay: index * 0.5,
+              ease: "easeInOut",
+            }}
+          >
+            <WorkCard
+              title={work.title}
+              description={work.description}
+              image={work.image}
+              height={590}
+              width={400}
+            />
+          </motion.div>
+        ))}
       </div>
     </section>
   );

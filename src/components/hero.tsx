@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { eczar, WorkSans } from "@/lib/font";
 import { cn } from "@/lib/util";
 import Image from "next/image";
@@ -7,7 +10,21 @@ const Hero = () => {
   return (
     <section className="pl-4 md:pl-[60px] xl:pl-[120px] pt-[108px]">
       <div className="flex flex-col lg:flex-col xl:flex-row justify-between gap-x-[54px]">
-        <div className="flex flex-col item-start">
+        <motion.div
+          className="flex flex-col item-start"
+          initial={{
+            x: -100,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+          }}
+        >
           <p
             className={cn(
               "px-6 py-3 bg-[#FFDDBF] hover:bg-[#e4c5aa] text-[#403930] rounded-[10px] font-semibold text-[24px]  leading-[150%] w-fit cursor-pointer",
@@ -51,8 +68,20 @@ const Hero = () => {
               Contact Me
             </button>
           </div>
-        </div>
-        <Image
+        </motion.div>
+        <motion.img
+          initial={{
+            x: 100,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+          }}
           src="/images/hero.svg"
           width={524}
           height={500}

@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { eczar, WorkSans } from "@/lib/font";
 import { cn } from "@/lib/util";
+import { motion } from "framer-motion";
+
 const Testimonial = () => {
   return (
     <section className="px-4">
